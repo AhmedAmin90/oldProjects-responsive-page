@@ -1,0 +1,381 @@
+
+/* General setting */
+
+body, html{
+    
+    font-family: 'Quicksand', sans-serif;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+
+
+
+ 
+
+  /* Head part */
+
+  .header{
+      width: 100%;
+      height: 680px;
+      display: flex;
+      flex-direction: column;
+      background-color: #414a4f;
+      
+    
+    }
+
+    .header>img{  
+        
+        filter: opacity(30%); 
+        width: 100%;
+        height: 100%;
+    }
+
+    /* start nav part */
+
+   
+    nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        padding-top: 35px;
+        padding-right: 100px;
+        padding-left: 70px;
+        }
+
+        @media (max-width: 800px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                }
+        }
+
+     nav{   
+        opacity: 0;
+        animation-name: fadein;
+        animation-duration:  1s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+
+    }
+
+    @keyframes fadein {
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+
+    li{
+        margin: 5px;
+        display: inline;
+        list-style: none;   
+    }
+    
+    a{
+        text-decoration: none;
+        color: white;
+        letter-spacing: 0.5px;  
+      
+    }
+
+
+    .nav-left>li>a{
+        font-size: 25px;
+        font-weight: 600; 
+    }
+
+    
+
+    
+    /* Words in Header */
+   
+    .words-header{
+        width: 70%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 30%;
+        left: 15%;
+        color: white;
+        opacity: 0;
+        
+    }
+
+    .words-header>h1{
+        font: bold 60px 'Open Sans', sans-serif;
+    }
+
+    .words-header>h3{
+        font:  30px 'Open Sans', sans-serif;
+        text-align: center;
+        padding: 30px 30px;
+    }
+
+    .btn-header{
+        width: 30%;
+        height: 15%;
+        border-radius: 5px;
+        border: none;
+        background-color: #268FE5;
+        color: white;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        align-self: center;
+
+    }
+
+    /* Responsive part */
+    @media (max-width: 800px){
+        .words-header>h1{
+            font: bold 50px 'Open Sans', sans-serif;
+            text-align: center;
+        }
+
+        .words-header>h3{
+            font:  22px 'Open Sans', sans-serif;
+            
+        }
+
+        .btn-header{
+            width: 80%;
+            font-size: 17px;
+        }
+    }
+
+/* animation part */
+    .words-header{
+        animation-name: enter; 
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        margin-top: 100px;
+
+    }
+
+    @keyframes enter{
+        100%{
+            opacity: 1;
+            margin-top: 0;     
+           }
+    }
+    
+
+    /* ====== End of Header part ===== */
+
+    /* Destinations */
+   
+    .some-of-work{
+        width: 90%;
+        height: auto;
+        margin: auto;
+        padding-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .some-of-work>h1{
+        text-transform: capitalize;
+        padding: 20px;
+        color: #414A4F;
+
+    }
+
+    .some-of-work>p{
+        font-family: sans-serif;
+        max-width: 90%;
+        font-size: 16px;
+        padding: 20px;
+        text-align: center;
+        line-height: 2;
+        color: #414A4F;
+
+    }
+
+    .some-of-work>hr{
+        width: 15%;
+        border: none;
+        height: 2px;
+        background-color: #2096F3;
+        margin: 50px;
+         
+    }
+
+  
+    .img-cont{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around
+        
+       
+
+    }
+
+    .img-cont>div{
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        margin-bottom: 20px
+        
+        
+       
+    }
+
+
+    .small{
+        flex-basis: 35%;
+      
+    }
+
+    .large{
+        flex-basis: 55%;
+    }
+
+    @media (max-width: 1000px ){
+        .img-cont{
+            flex-direction: column;
+            flex-wrap: wrap;
+            
+        }
+
+        .img-cont>div{
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            margin-bottom: 20px
+              
+        }
+        .small{
+            flex-basis: 100%;
+          
+        }
+    
+        .large{
+            flex-basis: 100%;
+        }
+    
+
+    }
+
+
+    /*  Tour packages */
+
+    .tour-packages{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items:  center;
+        width: 100%;
+        margin: auto;
+        height: 850px;
+        background-color: #F7F7F7;
+        
+
+
+    }
+
+    .tour-packages>h1{
+        text-transform: capitalize;
+        padding: 20px;
+        color: #414A4F;
+
+    }
+
+    .tour-packages>p{
+        font-family: sans-serif;
+        max-width: 90%;
+        font-size: 16px;
+        padding: 20px;
+        text-align: center;
+        line-height: 2;
+        color: #414A4F;
+
+    }
+
+    .tour-packages>hr{
+        width: 15%;
+        border: none;
+        height: 2px;
+        background-color: #2096F3;
+        margin: 50px;
+         
+    }
+
+
+    .tour-imgs{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 300px;
+
+    }
+
+    .tour-imgs>div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        height: 300px;
+    }
+
+    .fas{
+        font-size: 60px;
+        color: #8C9DFB;
+    }
+
+    .tour-imgs>div>h1{
+        padding: 10px;
+        color: #414A4F;
+    }
+
+    .tour-imgs>div>p{
+        text-align: center;
+        line-height: 2;
+        max-width: 70%;
+      
+        color: #414A4F;
+    }
+
+    @media (max-width: 1000px){
+
+        .tour-packages{
+            height: 1500px;
+        }
+        .tour-imgs{
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+           
+            
+            
+        }
+        .tour-imgs>div{
+            width: 100%;
+            margin: 30px;
+        }
+
+        .tour-imgs>div>p{
+            max-width: 90%;
+        }
+       
+    }
